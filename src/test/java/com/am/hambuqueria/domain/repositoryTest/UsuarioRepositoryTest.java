@@ -17,7 +17,6 @@ public class UsuarioRepositoryTest {
     void deveBuscarUsuarioPorId() {
         var expectedId = 2;
         var usuario = repository.findById(expectedId);
-        System.out.println("Response\n\n Expected ID: " + expectedId + " --- User ID: " + usuario.getId());
         assertEquals(expectedId, usuario.getId());
     }
 
@@ -26,7 +25,6 @@ public class UsuarioRepositoryTest {
         var containing = "E";
         var usuarios = repository.findByNomeContaining(containing);
         usuarios.forEach(usuario -> {
-            System.out.println("Response\n\n Containing: " + containing + " --- User Name: " + usuario.getNome());
             assertTrue(usuario.getNome().contains(containing));
         });
     }
@@ -35,7 +33,6 @@ public class UsuarioRepositoryTest {
     void deveBuscarUsuarioPorEmail() {
         var email = "lucasfelipe@gmail.com";
         var usuario = repository.findByEmail(email);
-        System.out.println("Response\n\n Email: " + email + " --- User Email: " + usuario.getEmail());
         assertEquals(email, usuario.getEmail());
     }
 }
