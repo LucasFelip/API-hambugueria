@@ -1,10 +1,9 @@
 name: Deploy Swagger in GitHub Pages
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
-      - master
+      - '**' 
 
 jobs:
   generate-openapi-spec:
@@ -14,7 +13,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 5.0.100
+          dotnet-version: 7.0.102
       - name: Install dependencies
         run: dotnet restore
       - name: Install tools
