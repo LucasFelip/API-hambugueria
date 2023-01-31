@@ -18,7 +18,7 @@ jobs:
           distribution: 'microsoft'
           cache: 'maven'
       - name: Execute project
-        run: mvnw spring-boot:run
+        run: ./mvnw spring-boot:run
       - name: Generate file to swagger
         run: ./mvnw springdoc-openapi:generate
 
