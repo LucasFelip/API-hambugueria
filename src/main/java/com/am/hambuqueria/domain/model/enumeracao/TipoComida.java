@@ -1,4 +1,4 @@
-package com.am.hambuqueria.domain.model;
+package com.am.hambuqueria.domain.model.enumeracao;
 
 public enum TipoComida {
     REFRI,
