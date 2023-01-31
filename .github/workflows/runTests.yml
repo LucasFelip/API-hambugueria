@@ -3,7 +3,7 @@ name: Run tests API
 on:
   push:
     branches:
-      - '**'        # matches every branch
+      - '**'
 
 jobs:
   deploy-dev:
