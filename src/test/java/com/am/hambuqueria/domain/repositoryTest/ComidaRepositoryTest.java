@@ -1,6 +1,6 @@
 package com.am.hambuqueria.domain.repositoryTest;
 
-import com.am.hambuqueria.domain.model.TipoComida;
+import com.am.hambuqueria.domain.model.enumeracao.TipoComida;
 import com.am.hambuqueria.domain.repository.ComidaRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
