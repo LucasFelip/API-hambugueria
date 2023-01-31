@@ -1,5 +1,6 @@
 package com.am.hambuqueria.domain.model;
 
+import com.am.hambuqueria.domain.model.enumeracao.TipoComida;
 import lombok.*;
 
 import javax.persistence.*;
