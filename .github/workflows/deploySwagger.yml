@@ -9,13 +9,26 @@ jobs:
   GenerateSwagger:
     runs-on: ubuntu-latest
     steps:
-       - name: Generate Swagger UI
-         uses: Legion2/swagger-ui-action@v1
-         with:
-           output: swagger-ui
-           spec-file: openapi.json
-       - name: Deploy to GitHub Pages
-         uses: peaceiris/actions-gh-pages@v3
-         with:
-           github_token: ${{ secrets.GITHUB_TOKEN }}
-           publish_dir: swagger-ui
+      - name: Checkout Security
+        uses: actions/checkout@v3
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'microsoft'
+          cache: 'maven'
+      - name: Execute project
+        run: ./mvnw spring-boot:run
+      - name: Generate file to swagger
+        run: ./mvnw springdoc-openapi:generate
+
+      - name: Generate Swagger UI
+        uses: Legion2/swagger-ui-action@v1
+        with:
+          output: swagger-ui
+          spec-file: openapi.json
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: swagger-ui
