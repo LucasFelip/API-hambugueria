@@ -1,4 +1,3 @@
-/*
 CREATE TABLE comida
 (
     codigo_comida  INT AUTO_INCREMENT NOT NULL,
@@ -34,4 +33,4 @@ CREATE TABLE comida_pedido
     codigo_pedido  INT NOT NULL,
     CONSTRAINT pk_burguer_pedido PRIMARY KEY (codigo_comida, codigo_pedido)
 );
-*/
+
