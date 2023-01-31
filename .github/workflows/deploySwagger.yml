@@ -19,15 +19,15 @@ jobs:
           cache: 'maven'
       - run: chmod +x mvnw
       - name: Execute project
-        run: ./mvnw spring-boot:run
-      - name: Generate file to swagger
-        run: ./mvnw springdoc-openapi:generate
+        run:
+            ./mvnw spring-boot:run
+            ./mvnw springdoc-openapi:generate
 
       - name: Generate Swagger UI
         uses: Legion2/swagger-ui-action@v1
         with:
           output: swagger-ui
-          spec-file: openapi.json
+          spec-file: swagger.json
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
