@@ -1,8 +1,7 @@
 # Hambugueria
 Projeto focando em desenvolvimento de uma api para controle de uma  hamburgueria com o foco em aprimoramento de tecnicas de desenvolvimento, além de adicional de projeto como portifolio.
 
-# Como rodar o projeto 
-
+# 👨‍💻 Como rodar o projeto
 ```bash
 # clonar repositório
 git clone https://github.com/LucasFelip/backend_hambugueria
@@ -11,9 +10,20 @@ git clone https://github.com/LucasFelip/backend_hambugueria
 ./mvnw spring-boot:run
 ``` 
 
-# Documentação
+# 📄 Documentação
 Documentação foi moldada com base no Swagger, para registrar funções da api, podendo ser acessado na execução do projeto de maneira local:
+
+# 🗂 Banco de dados
+Para as scripts presentes no flywat migration, foi utilizado um [gerador de dados][dados.generate]
+
+# 👤 Devs
+[@LucasFelip][github.autor.lucas]</br>
+[@Franciscoflh][github.autor.francisco]</br>
+
 
 <!-- Links de Exemplo -->
 [example.projeto.burguer]: [https://github.com/tomtom28/springBurger]
 [documentation.api]: []
+[dados.generate]: [https://generatedata.com/generator]
+[github.autor.lucas]: [https://github.com/LucasFelip]
+[github.autor.francisco]: [https://github.com/Franciscoflh]
