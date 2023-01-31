@@ -4,6 +4,6 @@ public enum TipoComida {
     REFRI,
     HAMBURGUER,
     FRITAS,
-    PASTEL
-
+    PASTEL,
+    COMBO
 }
