@@ -3,6 +3,7 @@ package com.am.hambuqueria.domain.serviceTest;
 import com.am.hambuqueria.domain.model.Usuario;
 import com.am.hambuqueria.domain.service.UsuarioService;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.transaction.Transactional;
@@ -14,28 +15,30 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Transactional
 @SpringBootTest
 class UsuarioServiceTest {
+    @Autowired
     private UsuarioService service;
 
-    String name = "Lucas";
+    String name = "Lucas Felipe";
     String email = "luscafreis@gmail.com";
     String endereco = "Algum lugar";
-    String senha = "12345";
+    String senha = "123456";
 
     @Test
     void listAll() {
-        service.listAll();
+        var list = service.listAll();
+        assertTrue(!list.isEmpty());
     }
 
     @Test
     void findUserById() {
-        var expectedId = 2;
+        var expectedId = 1;
         var usuario = service.findUserById(expectedId);
         assertEquals(expectedId, usuario.get().getId());
     }
 
     @Test
     void findUserByName() {
-        var containing = "L";
+        var containing = "Lucas";
         var users = service.findUserByName(containing);
         users.forEach(usuario -> {
             assertTrue(usuario.getNome().contains(containing));
