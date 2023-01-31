@@ -5,6 +5,7 @@ CREATE TABLE comida
     `descrição`    VARCHAR(255) NULL,
     preco          INT NULL,
     ingredientes   VARCHAR(255) NULL,
+    tipo_comida    INT NULL,
     CONSTRAINT pk_comida PRIMARY KEY (codigo_comida)
 );
 
