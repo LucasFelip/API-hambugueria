@@ -1,0 +1,38 @@
+name: Deploy Swagger to GitHub Pages
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
+      
+env:
+  MAVEN_OPTS: -Dmaven.repo.local=maven_repository
+  GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout security
+      uses: actions/checkout@v3
+
+    - name: Set up Java JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: 17
+
+    - name: Build with Maven
+      run: |
+        mvn clean install
+
+    - name: Deploy Swagger
+      run: |
+        mvn spring-boot:run
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.GH_PAGES_TOKEN }}
+        publish_dir: target/classes/static
