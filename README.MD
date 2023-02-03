@@ -1,5 +1,8 @@
 # Hambugueria
-Projeto focando em desenvolvimento de uma api para controle de uma  hamburgueria com o foco em aprimoramento de tecnicas de desenvolvimento, além de adicional de projeto como portifolio.
+Projeto focando em desenvolvimento de uma api para controle de uma  hamburgueria com o foco em aprimoramento de tecnicas de desenvolvimento. O objetivo principal da API 
+para sistema de hambúrgueres é proporcionar uma forma segura e eficiente de integrar diferentes aplicativos e sistemas, permitindo a automação de tarefas como recebimento de 
+pedidos, pagamentos, gestão de estoques e análise de dados. Isso pode ajudar a melhorar a eficiência e a satisfação do cliente, bem como a obtenção de insights valiosos para 
+a tomada de decisões estratégicas.
 
 # 👨‍💻 Como rodar o projeto
 ```bash
@@ -15,7 +18,8 @@ Baseando em caso de usos estruturados, para a API os requisitos funcionais e nã
 onde fornece as informações necessárias para fazer um bom uso deste documento, explicitando seus objetivos e as convenções que foram adotadas no texto, além de conter 
 uma lista de referências para outros documentos relacionados. O [relatorio][documentation.api.relatorio] serve como noção do desenvolvimento e das etapas decorridas do projeto.
 
-Documentação foi moldada com base no Swagger, para registrar funções da api, podendo ser acessado na execução do projeto de maneira local:
+Documentação das requisições foi moldada com base no Swagger, para registrar funções da api, podendo ser acessado na execução do projeto [local][documentation.api.swagger.local] 
+ou no link do gerado pela [CI][documentation.api.swagger.ci];
 
 # 🗂 Banco de dados
 Para as scripts presentes no flywat migration, foi utilizado um [gerador de dados][dados.generate]
@@ -27,6 +31,8 @@ Para as scripts presentes no flywat migration, foi utilizado um [gerador de dado
 
 <!-- Links -->
 [example.projeto.burguer]: <https://github.com/tomtom28/springBurger>
+[documentation.api.swagger.local]: <localhost:8081/swagger-ui.html>
+[documentation.api.swagger.ci]: <>
 [documentation.api.requisitos]:<https://1drv.ms/w/s!AngNKjRLym8qg6IqRtNBNFmgEUFxTA?e=yvCqzs>
 [documentation.api.relatorio]: <https://1drv.ms/w/s!AngNKjRLym8qg6Ism1ekAiSrfGIqmw?e=0HNHC7>
 [dados.generate]: <https://generatedata.com/generator>
