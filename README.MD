@@ -19,7 +19,7 @@ onde fornece as informações necessárias para fazer um bom uso deste documento
 uma lista de referências para outros documentos relacionados. O [relatorio][documentation.api.relatorio] serve como noção do desenvolvimento e das etapas decorridas do projeto.
 
 Documentação das requisições foi moldada com base no Swagger, para registrar funções da api, podendo ser acessado na execução do projeto [local][documentation.api.swagger.local] 
-ou no link do gerado pela [CI][documentation.api.swagger.ci];
+ou no link do gerado pela [CI][documentation.api.swagger.ci]
 
 # 🗂 Banco de dados
 Para as scripts presentes no flywat migration, foi utilizado um [gerador de dados][dados.generate]
