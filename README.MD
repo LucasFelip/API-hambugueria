@@ -11,6 +11,10 @@ git clone https://github.com/LucasFelip/backend_hambugueria
 ``` 
 
 # 📄 Documentação
+Baseando em caso de usos estruturados, para a API os requisitos funcionais e não funcionas, foram adicionados no [documento de requisitos][documentation.api.requisitos], 
+onde fornece as informações necessárias para fazer um bom uso deste documento, explicitando seus objetivos e as convenções que foram adotadas no texto, além de conter 
+uma lista de referências para outros documentos relacionados.
+
 Documentação foi moldada com base no Swagger, para registrar funções da api, podendo ser acessado na execução do projeto de maneira local:
 
 # 🗂 Banco de dados
@@ -23,7 +27,7 @@ Para as scripts presentes no flywat migration, foi utilizado um [gerador de dado
 
 <!-- Links de Exemplo -->
 [example.projeto.burguer]: [https://github.com/tomtom28/springBurger]
-[documentation.api]: []
+[documentation.api.requisitos]:[https://1drv.ms/w/s!AngNKjRLym8qg6IqRtNBNFmgEUFxTA?e=yvCqzs]
 [dados.generate]: [https://generatedata.com/generator]
 [github.autor.lucas]: [https://github.com/LucasFelip]
 [github.autor.francisco]: [https://github.com/Franciscoflh]
