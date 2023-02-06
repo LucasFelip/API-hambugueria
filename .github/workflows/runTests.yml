@@ -30,15 +30,12 @@ jobs:
 
       - name: Run Test
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
-        
-      - name: Run tests and generate report
-        run: |
-          mvn test surefire-report:report-only
 
-      - name: Report
-        uses: actions/upload-artifact@v2
+      - name: Generate report
+        uses: dorny/test-reporter@v1
+        if: always()
         with:
-          name: Tests report
-          path: target/site/surefire-report.html
+          name: Maven Tests
+          path: target/surefire-reports/*.xml
           reporter: java-junit
           fail-on-error: 'false'
