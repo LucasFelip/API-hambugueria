@@ -28,8 +28,12 @@ jobs:
       - name: Build project with Maven
         run: mvn --batch-mode -DskipTests package
 
-      - name: Test
+      - name: Run Test
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
+        
+      - name: Run tests and generate report
+        run: |
+          mvn test surefire-report:report-only
 
       - name: Report
         uses: actions/upload-artifact@v2
