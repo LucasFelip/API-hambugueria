@@ -2,8 +2,12 @@ name: Run tests API
 
 on:
   push:
-  workflow_dispatch:
+    branches:
+    - master
 
+env:
+  MAVEN_OPTS: -Dmaven.repo.local=maven_repository
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,19 +23,18 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: 'adopt'
+          distribution: 'microsoft'
 
-      - name: Build
+      - name: Build project with Maven
         run: mvn --batch-mode -DskipTests package
 
       - name: Test
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
 
       - name: Report
-        uses: dorny/test-reporter@v1
-        if: always()
+        uses: actions/upload-artifact@v2
         with:
-          name: Maven Tests
-          path: target/surefire-reports/*.xml
+          name: Tests report
+          path: target/site/surefire-report.html
           reporter: java-junit
           fail-on-error: 'false'
