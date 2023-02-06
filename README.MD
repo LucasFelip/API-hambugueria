@@ -9,6 +9,9 @@ a tomada de decisões estratégicas.
 # clonar repositório
 git clone https://github.com/LucasFelip/backend_hambugueria
 
+# build do projeto
+./mvn clean install
+
 # executar o projeto
 ./mvnw spring-boot:run
 ``` 
