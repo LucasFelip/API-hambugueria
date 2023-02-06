@@ -22,7 +22,7 @@ Documentação das requisições foi moldada com base no Swagger, para registrar
 ou no link do gerado pela [CI][documentation.api.swagger.ci];
 
 # 🗂 Banco de dados
-Para as scripts presentes no flywat migration, foi utilizado um [gerador de dados][dados.generate]
+[gerador de dados][dados.generate]
 
 # 👤 Devs
 [@LucasFelip][github.autor.lucas]</br>
