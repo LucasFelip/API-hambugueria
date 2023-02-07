@@ -1,31 +1,29 @@
 package com.am.hambuqueria.api.controller;
-import com.am.hambuqueria.domain.repository.UsuarioRepository;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import com.am.hambuqueria.domain.model.Usuario;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @Builder
 @RestController
 @AllArgsConstructor
 @RequestMapping(value = "/usuario")
 public class UsuarioController {
-
-    final UsuarioRepository usuarioRepository;
+    /*
+    final PessoaRepository pessoaRepository;
 
     @DeleteMapping(value= "/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     public void delete(@PathVariable int id){
-        usuarioRepository.deleteById(id);
+        pessoaRepository.deleteById(id);
     }
 
     @PostMapping
     @ResponseStatus
-    public ResponseEntity<Usuario> create(@RequestBody Usuario usuario){
-        Usuario usuarioCreated = usuarioRepository.save(usuario);
-        return new ResponseEntity<>(usuarioCreated, HttpStatus.CREATED);
+    public ResponseEntity<Pessoa> create(@RequestBody Pessoa pessoa){
+        Pessoa pessoaCreated = pessoaRepository.save(pessoa);
+        return new ResponseEntity<>(pessoaCreated, HttpStatus.CREATED);
     }
+     */
 }
