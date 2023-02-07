@@ -12,11 +12,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cliente extends Pessoa {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "codigo_cliente")
-    private Integer id;
-
     @OneToMany
     @JoinColumn(name = "codigo_pedido")
     private List<Pedido> pedidos;
