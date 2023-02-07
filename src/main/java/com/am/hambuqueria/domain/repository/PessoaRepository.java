@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface PessoaRepository extends JpaRepository<Pessoa, Integer> {
 
-    List<Pessoa> findByNomeContaining(@NonNull String nome);
+    List<Pessoa> findByNomeContainingIgnoreCase(@NonNull String nome);
 
     Pessoa findByEmail(@NonNull String email);
 
