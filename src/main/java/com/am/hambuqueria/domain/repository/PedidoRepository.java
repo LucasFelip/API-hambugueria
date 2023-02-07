@@ -10,7 +10,5 @@ import java.util.List;
 @Repository
 public interface PedidoRepository extends JpaRepository<Pedido, Integer> {
 
-    //Pedido findByNum_pedido(@Nullable Integer num_pedido);
-
     List<Pedido> findAll();
 }
