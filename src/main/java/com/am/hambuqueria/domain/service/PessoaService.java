@@ -1,12 +1,12 @@
 package com.am.hambuqueria.domain.service;
 
-import com.am.hambuqueria.domain.repository.UsuarioRepository;
+import com.am.hambuqueria.domain.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UsuarioService {
+public class PessoaService {
     @Autowired
-    private UsuarioRepository repository;
+    private PessoaRepository repository;
 
 }
