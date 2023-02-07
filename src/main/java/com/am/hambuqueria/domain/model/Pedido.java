@@ -30,8 +30,8 @@ public class Pedido {
     private StatusPedido statusPedido = null;
 
     @ManyToOne
-    @JoinColumn(name = "codigo_pessoa", referencedColumnName = "codigo_pessoa")
-    private Pessoa pessoa;
+    @JoinColumn(name = "cpf", referencedColumnName = "cpf")
+    private Cliente cliente;
 
     @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(name = "comida_pedido",
