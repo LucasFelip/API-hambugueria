@@ -31,7 +31,4 @@ public class Pessoa {
 
     @Size(max = 100)
     private String endereco;
-
-    @Size(min = 11, max = 11)
-    private String cpf;
 }
