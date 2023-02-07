@@ -1,11 +1,8 @@
 package com.am.hambuqueria.domain.model;
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.*;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
-import java.util.List;
 
 @Entity
 @Data
@@ -13,11 +10,10 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-/*  Classe de modelo de Usuário  */
-public class Usuario {
+public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "codigo_usuario")
+    @Column(name = "codigo_pessoa")
     private Integer id;
 
     @NotBlank
@@ -35,8 +31,4 @@ public class Usuario {
 
     @Size(max = 100)
     private String endereco;
-
-    @OneToMany
-    @JoinColumn(name = "codigo_pedido")
-    private List<Pedido> pedidos;
 }

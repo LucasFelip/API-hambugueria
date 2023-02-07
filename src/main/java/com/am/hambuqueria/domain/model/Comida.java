@@ -1,11 +1,11 @@
 package com.am.hambuqueria.domain.model;
 
 import com.am.hambuqueria.domain.model.enumeracao.TipoComida;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.*;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,6 +24,9 @@ public class Comida {
     @NotBlank
     @Size(min = 3, max = 100)
     private String nome;
+
+    @NotBlank
+    private Boolean disponibilidade;
 
     private String descrição;
 

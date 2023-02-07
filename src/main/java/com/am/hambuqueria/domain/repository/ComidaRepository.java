@@ -12,7 +12,7 @@ import java.util.List;
 public interface ComidaRepository extends JpaRepository<Comida, Integer> {
     Comida findById(@NonNull int expectedId);
 
-    List<Comida> findByNomeContaining(@NonNull String nome);
+    List<Comida> findByNomeContainingIgnoreCase(@NonNull String nome);
 
     List<Comida> findAll();
 
