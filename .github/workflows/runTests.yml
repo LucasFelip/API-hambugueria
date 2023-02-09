@@ -31,7 +31,7 @@ jobs:
       
     ## Etapa 5 - Relatorio dos testes
     - name: Report
-      uses: dorny/test-reporter@v1
+      uses: dorny/test-reporter@v2
       if: always()
       with:
         name: Maven Tests
