@@ -30,7 +30,7 @@ public class Pedido {
     private StatusPedido statusPedido = null;
 
     @ManyToOne
-    @JoinColumn(name = "cpf", referencedColumnName = "cpf")
+    @JoinColumn(name = "codigo_pessoa", referencedColumnName = "codigo_pessoa")
     private Cliente cliente;
 
     @ManyToMany(cascade = {CascadeType.ALL})
