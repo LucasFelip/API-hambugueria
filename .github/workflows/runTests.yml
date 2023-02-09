@@ -24,3 +24,7 @@ jobs:
     ## Etapa 3 - Construcao dos testes
     - name: Build test
       run: mvn --batch-mode -DskipTests package
+      
+    ## Etapa 4 -  Execucao dos Testes
+    - name: Run test
+      run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
