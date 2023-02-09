@@ -17,27 +17,16 @@ jobs:
       checks: write
       
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Java
-      uses: actions/setup-java@v2
-      with:
-        java-version: '17'
-        distribution: 'microsoft'
-        cache: 'maven'
-
-    - name: Build and test
-      run: |
-        mvn clean install
-        
-    - name: Generate JUnit report
-      run: |
-        mkdir -p target/surefire-reports
-        find target/test-classes -name "TEST-*.xml" -exec cp {} target/surefire-reports/ \;
-
-    - name: Upload JUnit report
-      uses: actions/upload-artifact@v2
-      with:
-        name: junit-report
-        path: target/surefire-reports
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'microsoft'
+          cache: 'maven'
+      - run: mvn --batch-mode --update-snapshots verify
+      - run: mkdir staging && cp target/*.jar staging
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Package
+          path: staging
