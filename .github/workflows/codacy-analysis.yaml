@@ -3,13 +3,11 @@ name: Codacy Security Scan
 on:
   push:
     branches:
-      - master
-  pull_request:
-    branches:
-      - master
+    - master
 
 jobs:
   codacy-security-scan:
+    permissions: write-all
     name: Codacy Security Scan
     runs-on: ubuntu-latest
     steps:
