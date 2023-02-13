@@ -9,32 +9,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      ## Etapa 1 - Criacao da copia do repositorio
     - name: Checkout Security
       uses: actions/checkout@v3
-      
-    ## Etapa 2 - Configuração JDK
     - name: Setup Java JDK
       uses: actions/setup-java@v3
       with:
         java-version: '17'
         distribution: 'microsoft'
         cache: 'maven'
-        
-    ## Etapa 3 - Construcao dos testes
     - name: Build test
       run: mvn --batch-mode -DskipTests package
-     
-    ## Etapa 4 -  Execucao dos Testes
     - name: Run test
       run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
-      
-    ## Etapa 5 - Relatorio dos testes
     - name: Report
       uses: dorny/test-reporter@v1
-      if: always()
+      if: success() || failure()
       with:
         name: Maven Tests
         path: target/surefire-reports/*.xml
         reporter: java-junit
-        fail-on-error: true
