@@ -4,26 +4,22 @@ import com.am.hambuqueria.domain.model.Pessoa;
 import com.am.hambuqueria.domain.repository.PessoaRepository;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.mockito.Mockito.*;
 
+@ExtendWith(SpringExtension.class)
 @DataJpaTest
 public class PessoaRepositoryTest {
-   /* PessoaRepository repository;
+    PessoaRepository repository;
     Pessoa info;
 
     @Before
     public void init() {
         repository = mock(PessoaRepository.class);
-        info = Pessoa.builder()
-                .id(1)
-                .nome("Lucas Felipe")
-                .senha("123")
-                .email("luscafreis@gmail.com")
-                .endereco("rua 16 algum lugar")
-                .telefone("98988525278")
-                .build();
+
     }
 
     @Test
@@ -54,5 +50,5 @@ public class PessoaRepositoryTest {
     public void deveDeletarInfo() {
         repository.delete(info);
         verify(repository, times(1)).delete(info);
-    }*/
+    }
 }
