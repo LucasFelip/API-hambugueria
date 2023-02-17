@@ -12,10 +12,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Funcionario extends Pessoa {
-    @Size(min = 11, max = 11)
-    @NotBlank
-    private String cpf;
-
     @NotBlank
     private FuncaoFuncionario funcaoFuncionario;
 }

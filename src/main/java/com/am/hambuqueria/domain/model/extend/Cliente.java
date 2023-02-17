@@ -11,13 +11,11 @@ import java.util.List;
 
 @Entity
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Cliente extends Pessoa {
-    @Size(min = 11, max = 11)
-    @NotBlank
-    private String cpf;
-
     @OneToMany
     @JoinColumn(name = "codigo_pedido")
     private List<Pedido> pedidos;

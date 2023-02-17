@@ -5,14 +5,13 @@ import jakarta.validation.constraints.*;
 import lombok.*;
 
 @Entity
-@Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Pessoa {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Pessoa {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "codigo_pessoa")
     private Integer id;
 
@@ -31,4 +30,8 @@ public class Pessoa {
 
     @Size(max = 100)
     private String endereco;
+
+    @Size(min = 11, max = 11)
+    @NotBlank
+    private String cpf;
 }
