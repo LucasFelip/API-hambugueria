@@ -3,9 +3,8 @@ package com.am.hambuqueria.domain.model;
 import com.am.hambuqueria.domain.model.enumeracao.StatusPedido;
 import com.am.hambuqueria.domain.model.enumeracao.TipoPedido;
 import com.am.hambuqueria.domain.model.extend.Cliente;
-import lombok.*;
-
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
