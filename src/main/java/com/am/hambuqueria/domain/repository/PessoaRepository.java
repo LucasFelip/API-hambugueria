@@ -7,7 +7,7 @@ import org.springframework.lang.NonNull;
 import java.util.List;
 
 public interface PessoaRepository<T extends Pessoa> extends JpaRepository<T,Integer> {
-    List<T> findByNomeContainingIgnoreCase(@NonNull String nome);
+    T findByNomeContainingIgnoreCase(@NonNull String nome);
 
-    List<T> findByCpfContainingIgnoreCase(@NonNull String cpf);
+    T findByCpfContainingIgnoreCase(@NonNull String cpf);
 }
