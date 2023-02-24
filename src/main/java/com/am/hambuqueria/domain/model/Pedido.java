@@ -22,7 +22,7 @@ public class Pedido {
     private Integer id;
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer num_pedido;
+    private Integer numPedido;
 
     private TipoPedido tipoPedido;
 
