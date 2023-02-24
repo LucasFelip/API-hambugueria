@@ -14,8 +14,11 @@ public interface ComidaRepository extends JpaRepository<Comida, Integer> {
 
     List<Comida> findByNomeContainingIgnoreCase(@NonNull String nome);
 
-    List<Comida> findAll();
-
     List<Comida> findByTipoComida(TipoComida tipoComida);
+
+    List<Comida> findByDisponibilidade(Boolean disponibilidade);
+
+    List<Comida> findByPedidos_NumPedido(@NonNull Integer numPedido);
+
 
 }
