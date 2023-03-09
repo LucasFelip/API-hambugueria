@@ -19,6 +19,4 @@ public interface ComidaRepository extends JpaRepository<Comida, Integer> {
     List<Comida> findByDisponibilidade(Boolean disponibilidade);
 
     List<Comida> findByPedidos_NumPedido(@NonNull Integer numPedido);
-
-
 }
