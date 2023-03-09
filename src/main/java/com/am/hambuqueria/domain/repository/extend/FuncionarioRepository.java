@@ -11,4 +11,8 @@ import java.util.List;
 @Repository
 public interface FuncionarioRepository extends PessoaRepository<Funcionario> {
     List<Funcionario> findByFuncaoFuncionario(@NonNull FuncaoFuncionario funcaoFuncionario);
+
+    Funcionario findByNomeContainingIgnoreCase(@NonNull String nome);
+
+    Funcionario findByCpfContainingIgnoreCase(@NonNull String cpf);
 }

@@ -14,4 +14,12 @@ public class ClienteService extends PessoaService<Cliente> {
     public Cliente buscarPorNumPedido(Integer num_pedido) {
         return repository.findByPedidos_numPedido(num_pedido);
     }
+
+    public Cliente buscarPorNome(String nome){
+        return repository.findByNomeContainingIgnoreCase(nome);
+    }
+
+    public Cliente buscarPorCpf(String cpf){
+        return repository.findByCpfContainingIgnoreCase(cpf);
+    }
 }
