@@ -4,13 +4,12 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
 
-@Entity
+@MappedSuperclass
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-public class Pessoa {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codigo_pessoa")
@@ -31,4 +30,8 @@ public class Pessoa {
 
     @Size(max = 100)
     private String endereco;
+
+    @Size(min = 11, max = 11)
+    @NotBlank
+    private String cpf;
 }
