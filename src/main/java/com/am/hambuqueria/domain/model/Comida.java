@@ -27,7 +27,7 @@ public class Comida {
     @NotBlank
     private Boolean disponibilidade;
 
-    private String descrição;
+    private String descricao;
 
     @NotBlank
     private Integer preco;
